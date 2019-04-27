@@ -52,6 +52,12 @@ To build the module, ensure that you have the headers for the currently running 
 
 Then check out the knetstat source code and execute `make`. This should create `knetstat.ko` which can be loaded using `insmod`.
 
+Note:
+   For CentOS, need: sudo yum install kernel-headers make gcc
+   Need linux_kernel version at least 3.13. If lower, encounter following errors:
+       knetstat.c:79:2: error: implicit declaration of function ‘seq_setwidth’
+       knetstat.c:86:2: error: implicit declaration of function ‘seq_pad’
+
 Notes for Java developers
 --------------------------
 
